@@ -1,0 +1,10 @@
+def main with input in output out as
+    if in < 5 then
+        out := 65
+    else if not (in - 1 < 4) then 
+        out := 55
+    else (
+        out := 10;
+        out := out + 100
+    );
+    skip

@@ -1,0 +1,18 @@
+  l0: nop
+  l2: loadI 65 => out
+      jump l0
+  l3: nop
+      jump l0
+  l4: subI in 1 => in
+      loadI 4 => out
+      less in out => in
+      not in => in
+      cjump in l5 l6
+  l5: loadI 55 => out
+      jump l3
+  l6: loadI 10 => out
+      addI out 100 => out
+      jump l3
+main: loadI 5 => out
+      less in out => out
+      cjump out l2 l4

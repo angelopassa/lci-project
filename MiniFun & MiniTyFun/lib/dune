@@ -1,0 +1,15 @@
+(menhir
+ (modules MiniTyFunParser))
+
+(ocamllex MiniTyFunScanner)
+
+(library
+ (name MiniFunLib)
+ (modules MiniFun)
+ (flags
+  (:standard -w -39)))
+
+(library
+ (name MiniTyFunLib)
+ (modules MiniTyFunParser MiniTyFunScanner MiniTyFun)
+ (libraries MiniFunLib))

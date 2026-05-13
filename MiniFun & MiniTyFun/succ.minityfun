@@ -1,0 +1,1 @@
+let succ = fun x : int => x + 1 in succ

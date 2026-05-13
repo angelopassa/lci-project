@@ -1,0 +1,18 @@
+(menhir
+ (modules MiniImpParser))
+
+(ocamllex MiniImpScanner)
+
+(library
+ (name MiniLang)
+ (preprocess
+  (pps ppx_deriving.show))
+ (modules
+  Cfg
+  MiniImp
+  MiniImpScanner
+  MiniImpParser
+  MiniRISC
+  DataFlow_Liveness
+  DataFlow_DV
+  CodeGen))

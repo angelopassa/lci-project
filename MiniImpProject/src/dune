@@ -1,0 +1,13 @@
+(executable
+ (name Compiler)
+ (modules Compiler)
+ (preprocess
+  (pps ppx_deriving.show))
+ (libraries MiniLang))
+
+(executable
+ (name Interpreter)
+ (modules Interpreter)
+ (preprocess
+  (pps ppx_deriving.show))
+ (libraries MiniLang))

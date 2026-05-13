@@ -1,0 +1,17 @@
+def main with input in output result as
+    x := in;
+    sum_result := 0;
+    prod_result := 1;
+    while not x < 0 do (
+        sum_result := sum_result + x;
+        prod_result := prod_result * x;
+        x := x - 1
+    );
+    if in < 0 then (
+        sum_result := 0;
+        prod_result := 0
+    ) else (
+        skip
+    );
+    result := sum_result + prod_result;
+    skip

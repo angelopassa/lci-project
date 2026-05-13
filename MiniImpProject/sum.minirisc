@@ -1,0 +1,11 @@
+  l0: nop
+  l1: loadI 0 => in
+      less r1 in => in
+      not in => in
+      cjump in l2 l0
+  l2: add out r1 => out
+      subI r1 1 => r1
+      jump l1
+main: copy in => r1
+      loadI 0 => out
+      jump l1

@@ -1,0 +1,21 @@
+  l0: add r3 r2 => out
+  l1: loadI 0 => out
+      less in out => in
+      cjump in l2 l3
+  l2: loadI 0 => r3
+      loadI 0 => r2
+      jump l0
+  l3: nop
+      jump l0
+  l4: loadI 0 => r1
+      less out r1 => r1
+      not r1 => r1
+      cjump r1 l5 l1
+  l5: add r3 out => r3
+      mult r2 out => r2
+      subI out 1 => out
+      jump l4
+main: copy in => out
+      loadI 0 => r3
+      loadI 1 => r2
+      jump l4
